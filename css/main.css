@@ -1,0 +1,32 @@
+@import url('../libs/css/normalize.css');
+@import url('./reset.css');
+@import url('./global.css');
+@import url('./fonts.css');
+@import url('./common.css');
+@import url('./components/header/header.css');
+@import url('./components/search-form/search-form.css');
+@import url('./components/products-tabs/products-tabs.css');
+@import url('./components/new-collection/new-collection.css');
+@import url('./typography.css');
+@import url('./components/our-brand/our-brand.css');
+@import url('./components/product-card/product-card.css');
+
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+
+

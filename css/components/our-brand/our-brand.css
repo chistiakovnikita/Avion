@@ -1,0 +1,26 @@
+.our-brand {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+.our-brand__block {
+    width: 305px;
+    height: 244px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--light-gray);
+    padding: 48px;
+}
+
+.our-brand__title {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.our-brand__inner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}

@@ -1,0 +1,39 @@
+.new-collection {
+    position: relative;
+    background-image: url(../../../images/section-new-collection/1.jpg);
+    height: 710px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 80px;
+}
+
+.new-collection__block {
+    position: absolute;
+    padding: 48px 61px 46px 56px;
+    top: 130px;
+    right: 80px;
+    width: 630px;
+    height: 444px;
+    left: 730px;
+    top: 130px;
+    background: #ffffff;
+}
+.new-collection__title {
+    margin-bottom: 20px;
+}
+
+.new-collection__subtitle {
+    margin-bottom: 157px;
+}
+
+.collection-link {
+    padding: 16px 32px;
+    background-color: var(--light-gray);
+    transition: background-color 0.3s linear;
+}
+
+.collection-link:hover {
+    
+    background-color: rgb(216, 204, 242);
+}
