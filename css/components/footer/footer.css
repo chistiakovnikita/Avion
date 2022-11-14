@@ -1,0 +1,115 @@
+.footer {
+    background: var(--dark-primary);
+    height: 380px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1276px;
+    margin: 0 auto;
+    margin-top: 86px;
+    border-bottom: 1px solid var(--primary);
+}
+
+.footer-navigation {
+    flex: 0.3 0 auto;
+}
+
+.footer-navigation__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 58px;
+}
+
+.footer-navigation__item {
+    margin-bottom: 12px;
+}
+
+.footer-navigation__item:last-child {
+    margin-bottom: 79px;
+}
+
+.footer-navigation__title {
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white);
+}
+
+.footer-navigation__link {
+    font-family: "Satoshi";
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--white);
+}
+
+.footer-distribution {
+    margin-top: 58px;
+    flex: 0.45 1 auto;
+}
+
+.footer-distribution__title {
+    margin-bottom: 16px;
+}
+
+.form__input--footer {
+    outline: none;
+    width: 100%;
+    max-width: 509px;
+    height: 56px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form__input--footer::placeholder {
+    font-family: "Satoshi";
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 32px;
+    color: var(--white);
+}
+
+.form__button--footer {
+    font-family: "Satoshi";
+    margin-left: -4px;
+    width: 118px;
+    height: 56px;
+    line-height: 24px;
+    color: var(--dark-primary);
+    border: none;
+    background: var(--white);
+    transition: transform 0.3s linear;
+    cursor: pointer;
+}
+
+.form__button--footer:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1276px;
+    margin: 0 auto;
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.footer-social-networks__link:not(:last-child) {
+    margin-right: 24px;
+    }
+
+.footer-social-networks__icon {
+    fill: var(--white);
+    transition: fill 0.3s linear;
+}
+
+
+
+.footer-social-networks__icon:hover {
+    fill: var(--light-blue);
+}
+

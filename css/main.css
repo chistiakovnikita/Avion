@@ -10,6 +10,11 @@
 @import url('./typography.css');
 @import url('./components/our-brand/our-brand.css');
 @import url('./components/product-card/product-card.css');
+@import url('./components/story/story.css');
+@import url('./components/distribution/distribution.css');
+@import url('./components/email-sign-up/form.css');
+@import url('./components/footer/footer.css');
+
 
 
 
@@ -25,6 +30,7 @@ body {
     font-family: 'Clash Display', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    margin: 0 1p;
 }
 
 

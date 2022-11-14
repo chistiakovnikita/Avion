@@ -19,10 +19,15 @@
     align-items: center;
 }
 
+.logo-wrapper {
+    flex: 0.42 0 auto;
+    text-align: end;
+
+}
+
 .logo {
     color: var(--dark-blue);
     font-size: 24px;
-    margin-left: 372px;
     transition: color 0.3s linear;
 }
 .logo:hover {

@@ -2,6 +2,15 @@ a {
     text-decoration: none;
 }
 
+.center {
+    text-align: center;
+}
+
+
+.flex-container {
+    display: flex;
+}
+
 
 
 

@@ -2,24 +2,40 @@
 }
 
 .headline-two {
-    font-family: "Clash Display";
     font-size: 32px;
     line-height: 44.8px;
     color: var(--dark-blue);
 }
 
+.headline-two--white {
+    font-size: 32px;
+    line-height: 39.36px;
+    color: var(--white);
+}
+
 .headline-three {
-    font-family: "Clash Display";
     font-size: 24px;
     line-height: 33.6px;
     color: var(--dark-primary);
 }
 
 .headline-four {
-    font-family: "Clash Display";
     font-size: 20px;
     line-height: 28px;
     color: var(--dark-primary);
+}
+
+.headline-five--white {
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--white);
+}
+
+.body-small {
+    font-family: 'Satoshi';
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--white);
 }
 
 .body-medium {
@@ -29,9 +45,25 @@
     color: var(--dark-primary);
 }
 
+.body-medium--white {
+    font-family: "Satoshi";
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+}
+
 .body-large {
     font-family: "Satoshi";
     font-size: 18px;
     line-height: 27px;
     color: var(--blue);
 }
+
+.body-large--white {
+    font-family: "Satoshi";
+    font-size: 18px;
+    line-height: 24.3px;
+    color: var(--white);
+}
+
+

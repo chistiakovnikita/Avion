@@ -9,16 +9,17 @@
 }
 
 .new-collection__block {
-    position: absolute;
-    padding: 48px 61px 46px 56px;
+    position: absolute; 
     top: 130px;
     right: 80px;
-    width: 630px;
+    max-width: 630px;
     height: 444px;
-    left: 730px;
-    top: 130px;
-    background: #ffffff;
+    padding: 48px 61px 46px 56px;
+    background: #ffffff;     
+   
 }
+
+
 .new-collection__title {
     margin-bottom: 20px;
 }
@@ -27,13 +28,13 @@
     margin-bottom: 157px;
 }
 
-.collection-link {
+.link-collection {
     padding: 16px 32px;
     background-color: var(--light-gray);
     transition: background-color 0.3s linear;
 }
 
-.collection-link:hover {
+.link-collection:hover {
     
     background-color: rgb(216, 204, 242);
 }
