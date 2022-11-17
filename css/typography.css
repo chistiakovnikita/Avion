@@ -1,4 +1,7 @@
 .headline-one {
+    font-size: 36px;
+    line-height: 50.4px;
+    color:var(--dark-primary);
 }
 
 .headline-two {
@@ -25,14 +28,27 @@
     color: var(--dark-primary);
 }
 
+.headline-five {
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--dark-primary);
+}
+
 .headline-five--white {
     font-size: 16px;
     line-height: 20px;
     color: var(--white);
 }
 
+.headline-six {
+font-size: 14px;
+line-height: 17px;
+color: var(--dark-primary);
+
+}
+
 .body-small {
-    font-family: 'Satoshi';
+    font-family: "Satoshi";
     font-size: 14px;
     line-height: 19px;
     color: var(--white);
@@ -65,5 +81,3 @@
     line-height: 24.3px;
     color: var(--white);
 }
-
-

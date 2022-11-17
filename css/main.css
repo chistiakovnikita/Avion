@@ -14,6 +14,10 @@
 @import url('./components/distribution/distribution.css');
 @import url('./components/email-sign-up/form.css');
 @import url('./components/footer/footer.css');
+@import url('./components/about-us/about-us.css');
+@import url('./components/button/button-get-in-touch.css');
+@import url('./components/header/header--product.css');
+@import url('./components/product/product.css');
 
 
 
@@ -30,7 +34,6 @@ body {
     font-family: 'Clash Display', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    margin: 0 1p;
 }
 
 

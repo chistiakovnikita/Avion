@@ -1,0 +1,91 @@
+.product {
+    background: var(--light-gray);
+    display: flex;
+    padding: 50px 0 47px 80px;
+}
+
+.product__description {
+    padding: 81px 60px;
+}
+
+.product__title {
+    margin-bottom: 16px;
+}
+
+.product__subtitle {
+    margin-bottom: 14px;
+}
+
+.product__text {
+    margin-bottom: 36px;
+}
+
+.product-dimensions {
+    margin-bottom: 40px;
+}
+
+.product-dimensions__title {
+    margin-bottom: 24px;
+}
+
+.product__price {
+    display: block;
+    font-family: "Satoshi";
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--dark-primary);
+    margin-bottom: 52px;
+}
+
+.product__wrapper {
+    margin-bottom: 60px;
+}
+
+.product__quantity {
+    font-family: "Satoshi";
+    font-size: 25px;
+    line-height: 22px;
+    color: var(--dark-primary);
+    margin: 0 10px 5px 10px;
+}
+
+.product-dimensions__wrapper {
+    display: flex;
+}
+
+.product-dimensions__item {
+    margin-right: 99.5px;
+}
+
+.product-dimensions__subtitle {
+    margin-bottom: 15px;
+}
+
+.product__btn-quantity {
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 42px;
+    transition: background 0.3s linear;
+}
+
+.product__btn-quantity:hover {
+    background: rgb(216, 204, 242);
+}
+
+.product__btn-cart {
+    display: block;
+}
+
+.product__btn-cart {
+    width: 143px;
+    height: 56px;
+    background: var(--dark-primary);
+    font-family: "Satoshi";
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    cursor: pointer;
+}

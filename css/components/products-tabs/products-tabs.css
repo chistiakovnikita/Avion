@@ -1,8 +1,14 @@
+
+
 .products-tabs {
     display: flex;
     justify-content: space-between;
     max-width: 676px;
+}
+
+.products-tabs-wrapper {
     margin: 20px auto;
+    max-width: 676px;
 }
 
 .products-tabs__link {
@@ -16,4 +22,6 @@
 .products-tabs__link:hover {
    background-color: rgb(216, 204, 242);
 }
+
+
 

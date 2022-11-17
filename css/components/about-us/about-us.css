@@ -1,0 +1,42 @@
+
+.about-us-story__text-content {
+    width: 720px;
+    height: 603px;
+    padding: 72px 122px 0 84px;
+}
+
+
+.about-us-story__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us-story__inner--next {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.about-us__title {
+    margin: 67px 0 79px 0;
+}
+
+.about-us-story__text {
+    font-family: "Satoshi";
+    font-size: 16px;
+    line-height: 22px;
+    color: #505977;
+    margin-bottom: 25px;
+}
+
+.about-us-story__title {
+    margin-bottom: 25px;
+}
+
+.about-us-story__text-content p:last-of-type {
+    margin-bottom: 200px;
+}
+
+.about-us-story__img {
+    width: 759px;
+}
