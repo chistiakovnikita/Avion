@@ -1,7 +1,13 @@
 .headline-one {
     font-size: 36px;
     line-height: 50.4px;
-    color:var(--dark-primary);
+    color: var(--dark-primary);
+}
+
+.headline-one--white {
+    font-size: 36px;
+    line-height: 50.4px;
+    color: var(--white);
 }
 
 .headline-two {
@@ -28,6 +34,12 @@
     color: var(--dark-primary);
 }
 
+.headline-four--blue {
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--primary);
+}
+
 .headline-five {
     font-size: 16px;
     line-height: 20px;
@@ -41,10 +53,16 @@
 }
 
 .headline-six {
-font-size: 14px;
-line-height: 17px;
-color: var(--dark-primary);
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--dark-primary);
+}
 
+.headline-six--blue {
+    font-family: "Satoshi";
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--primary);
 }
 
 .body-small {
@@ -52,6 +70,13 @@ color: var(--dark-primary);
     font-size: 14px;
     line-height: 19px;
     color: var(--white);
+}
+
+.body-small--blue {
+    font-family: "Satoshi";
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--dark-primary);
 }
 
 .body-medium {
@@ -81,3 +106,4 @@ color: var(--dark-primary);
     line-height: 24.3px;
     color: var(--white);
 }
+

@@ -1,0 +1,16 @@
+.cart {
+   
+    background: var(--light-gray);
+}
+
+
+.cart__wrapper {
+    width: 100%;
+    max-width: 1060px;
+    height: 749px;
+    margin: 0 auto;
+}
+
+.cart__title {
+    padding: 64px 0 48px 0;;
+}

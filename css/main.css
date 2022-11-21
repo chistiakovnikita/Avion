@@ -18,6 +18,11 @@
 @import url('./components/button/button-get-in-touch.css');
 @import url('./components/header/header--product.css');
 @import url('./components/product/product.css');
+@import url('./components/products/products.css');
+@import url('./components/dropdown/dropdown.css');
+@import url('./components/cart/cart.css');
+@import url('./components/cart-product/cart-product.css');
+
 
 
 

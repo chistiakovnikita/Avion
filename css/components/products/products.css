@@ -1,0 +1,59 @@
+.products-header {
+    background: url(../../../images/products/Frame.jpg);
+    height: 209px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end
+    
+}
+
+.products-header__title {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto 36px;
+}
+
+.products-menu {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.products-menu__wrapper {
+    margin: 20px 80px 48px 0;
+}
+
+
+.products-gallery {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    row-gap: 50px;
+
+}
+
+.products-gallery__link {
+    align-items: center;
+}
+
+
+.products__link {
+   margin-bottom: 80px;
+}
+
+
+
+
+
+
+
+
+
+
