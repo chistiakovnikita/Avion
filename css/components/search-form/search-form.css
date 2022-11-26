@@ -2,3 +2,12 @@
     cursor: pointer;
     display: inline-block;
 }
+
+.search-form-icon {
+    fill: var(--dark-primary);
+    transition: fill 0.3s linear;
+    
+}
+.search-form-icon:hover {
+    fill: rgb(216, 204, 242);
+}

@@ -1,10 +1,11 @@
 .story-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
+    
 }
 
 .story__collection-block {
@@ -32,9 +33,39 @@ margin-bottom: 205px;
 }
 
 .story__link:hover {
-   
     color: rgb(216, 204, 242);
-   
-    
 }
 
+
+
+@media screen and (max-width: 768px) {
+    .story__image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .headline-two--white {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .story__subtitle {
+        margin-bottom: 40px;
+}
+
+.story__collection-block {
+    padding: 30px 5px 0px 5px;
+    height: 255px;
+}
+
+}
+
+@media screen and (max-width: 375px) {
+    .headline-two--white {
+        font-size: 20px;
+    }
+    .body-large--white {
+        font-size: 16px;
+    }
+}

@@ -1,11 +1,9 @@
 
-
-
 .distribution {
   background-image: url(../../../images/distribution/image.jpg);
-   height: 444px;
    background-size: cover;
    text-align: center;
+   padding: 0 5px 50px 5px
 }
 
 
@@ -34,4 +32,24 @@
   margin-right: 8px;
 }
 
+.distribution__form {
+  display: flex;
+  justify-content: center;
+}
 
+
+@media screen and (max-width: 450px) {
+  .distribution__title {
+    font-size: 28px;
+    padding: 32px 0 12px 0;
+
+  }
+
+  .our-brand__inner {
+    margin-bottom: 30px;
+  }
+
+  .our-brand__block {
+    padding: 15px;
+  }
+}

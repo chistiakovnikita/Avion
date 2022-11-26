@@ -7,8 +7,8 @@
 .cart__wrapper {
     width: 100%;
     max-width: 1060px;
-    height: 749px;
     margin: 0 auto;
+    padding:0 5px 50px 5px;
 }
 
 .cart__title {

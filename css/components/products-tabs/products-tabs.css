@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 676px;
+    flex-wrap: wrap;
 }
 
 .products-tabs-wrapper {
