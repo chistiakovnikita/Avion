@@ -1,0 +1,25 @@
+.products-tabs {
+    display: flex;
+    justify-content: space-between;
+    max-width: 676px;
+    flex-wrap: wrap;
+}
+
+.products-tabs-wrapper {
+    margin: 20px auto;
+    max-width: 676px;
+}
+
+.products-tabs__link {
+    color: var(--light-blue);
+    padding: 5px;
+    border-radius: 10px;
+    transition:background-color 0.3s linear;
+}
+
+
+.products-tabs__link:hover {
+   background-color: rgb(216, 204, 242);
+}
+
+

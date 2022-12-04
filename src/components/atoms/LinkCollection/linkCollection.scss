@@ -1,0 +1,23 @@
+
+.link-collection {
+    width: 106px;
+    height: 24px;
+    padding: 16px 32px;
+    background-color: var(--light-gray);
+    color: var(--dark-primary);
+    transition: background-color 0.3s linear;
+    font-family: "Satoshi";
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.link-collection:hover {
+    background-color: rgb(216, 204, 242);
+}
+
+
+.our-brand__link {
+    margin: 80px 0 80px;
+}
+
+

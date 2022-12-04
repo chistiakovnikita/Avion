@@ -1,0 +1,19 @@
+@import "normalize.css";
+@import 'bootstrap';
+
+@import "./scss/fonts.scss";
+@import "./scss/reset.scss";
+
+@import "./scss/theme/colors.scss";
+@import "./scss/theme/typography.scss";
+@import "./scss/theme/breakpoints.scss";
+@import "./scss/common.scss";
+
+
+
+
+body {
+  font-family: 'Clash Display', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}

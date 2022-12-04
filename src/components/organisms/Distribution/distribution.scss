@@ -1,0 +1,91 @@
+.distribution {
+    background-image: url(../../../assets/images/Distribution/Image.jpg);
+     background-size: cover;
+     text-align: center;
+     padding: 0 5px 50px 5px
+  }
+  
+  
+  
+  .distribution__title {
+    padding: 97px 0 12px 0;
+  }
+  
+  .distribution__subtitle {
+    margin-bottom: 30px;
+  }
+  
+  .distribution-benefits{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .distribution-benefits__text {
+    display: inline-block;
+    vertical-align: super;
+    margin-right: 37px;
+  }
+  
+  .distribution-benefits__icon{
+    margin-right: 8px;
+  }
+  
+  .distribution__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form__input{
+    outline: none;
+    border: none;
+    width: 100%;
+    max-width: 354px;
+    height: 56px;
+    background: var(--light-gray);
+}
+
+.form__input::placeholder{
+font-family: 'Satoshi';
+font-size: 16px;
+line-height: 22px;
+color: var(--dark-primary);
+opacity: 0.2;
+padding-left: 32px;
+}
+
+.form__button {
+font-family: 'Satoshi';
+margin-left: -4px;
+width: 118px;
+height: 56px;
+line-height: 24px;
+color: var(--white);
+border: none;
+background: var(--dark-primary);
+transition: transform 0.3s linear;
+cursor: pointer;
+}
+
+
+.form__button:hover {
+transform: scale(1.1);
+}
+
+  
+  
+  @media screen and (max-width: 450px) {
+    .distribution__title {
+      font-size: 28px;
+      padding: 32px 0 12px 0;
+  
+    }
+  
+    .our-brand__inner {
+      margin-bottom: 30px;
+    }
+  
+    .our-brand__block {
+      padding: 15px;
+    }
+  }
