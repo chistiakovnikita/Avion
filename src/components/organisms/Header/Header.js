@@ -6,7 +6,6 @@ export class Header extends Component {
 
     render() {
         return `
-        <header class="header">
         <div class="header__wrapper">
             <div class="header__inner">
                 <search-form></search-form>
@@ -65,7 +64,6 @@ export class Header extends Component {
                 </nav>
             </div>
         </div>
-    </header>
         `
     }
 

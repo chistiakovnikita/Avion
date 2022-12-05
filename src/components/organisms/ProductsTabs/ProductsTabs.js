@@ -5,7 +5,6 @@ export class ProductsTabs extends Component {
 
     render() {
         return `
-        <section>
             <div class="products-tabs-wrapper">
                 <div class="products-tabs">
                     <a class="products-tabs__link" href="#">Plant pots</a>
@@ -17,7 +16,6 @@ export class ProductsTabs extends Component {
                     <a class="products-tabs__link" href="#">Cutlery</a>
                 </div>
             </div>
-        </section>
         `
     }
 }

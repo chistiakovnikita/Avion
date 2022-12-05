@@ -5,7 +5,6 @@ export class NewCollection extends Component {
 
     render() {
         return `
-            <section>
                 <div class="new-collection">
                     <div class="new-collection__block">
                         <h2 class="new-collection__title">
@@ -17,7 +16,6 @@ export class NewCollection extends Component {
                         <link-collection></link-collection>
                     </div>
                 </div>
-            </section>
         `
     }
 
