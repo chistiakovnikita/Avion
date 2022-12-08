@@ -1,0 +1,42 @@
+.header__mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--light-gray);
+    width: 300px;
+    z-index: 101;
+}
+
+.header__mobile-navigation {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header__mobile-navigation-link {
+    font-size: 30px;
+    font-family: "Satoshi";
+    color: var(--light-blue);
+    transition: color 0.3s linear;
+}
+
+.header__mobile-navigation-link:hover {
+    color: var(--dark-primary);
+}
+
+.header__mobile-navigation-item {
+    margin-top: 30px;
+}
+
+.header__mobile-button {
+    border: none;
+    padding: 0px;
+}
+
+.header__mobile-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 0;
+}

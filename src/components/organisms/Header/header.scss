@@ -66,24 +66,21 @@
     border-bottom: 2px solid;
 }
 
-.btn {
-    border:  none;
-    padding: 0px;
-}
-
-
-.header__hamburger {
-    display: none;
-}
-
 .header__icon {
     fill: var(--dark-primary);
     transition: fill 0.3s linear;
 }
 
-.header__icon:hover {
-    fill: rgb(216, 204, 242);;
+.header__hamburger {
+    border: none;
+    padding: 0px;
+    display: none;
 }
+
+.header__icon:hover {
+    fill: rgb(216, 204, 242);
+}
+
 
 
 
@@ -98,9 +95,6 @@
 
 @media screen and (max-width: 768px) {
    
-    .header__hamburger {
-        display: block;
-    }
 
     .header-navigation__menu {
         display: none;

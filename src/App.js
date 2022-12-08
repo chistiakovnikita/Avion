@@ -7,27 +7,26 @@ export class App extends Component {
       render() {
             return `
                 <header class="header">
-                     <avion-header></avion-header>
+                   <avion-header></avion-header>
                 </header
                 <main>
-                    <section>
-                        <products-tabs></products-tabs>
-                    </section>
-                    <section>
-                        <avion-about></avion-about>
-                    </section>
-                    <section>
-                    <div class="our-brand__description-wrapper">
-                        <our-brand-description></our-brand-description>
-                    </div>
-                    </section>
-                    <section>
-                        <avion-distribution></avion-distribution>
-                    </section>
-                <main>
+                  <section>
+                    <products-tabs></products-tabs>
+                  </section>
+                  <section>
+                     <div class="products">
+                         <products-menu></products-menu>
+                         <products-gallery></products-gallery>
+                         <div class="products__link container center">
+                            <link-collection></link-collection>
+                         </div>
+                      </div>
+                  </section>
+                </main>
                 <footer>
-                    <avion-footer></avion-footer>
+                   <avion-footer></avion-footer>
                 </footer>
+    
             `
       }
 
@@ -168,3 +167,33 @@ customElements.define('avion-app', App);
 //             </footer>
 //       `
 // }
+
+
+
+
+
+
+
+// ABOUT
+{/* <header class="header">
+<avion-header></avion-header>
+</header
+<main>
+<section>
+   <products-tabs></products-tabs>
+</section>
+<section>
+   <avion-about></avion-about>
+</section>
+<section>
+<div class="our-brand__description-wrapper">
+   <our-brand-description></our-brand-description>
+</div>
+</section>
+<section>
+   <avion-distribution></avion-distribution>
+</section>
+<main>
+<footer>
+<avion-footer></avion-footer>
+</footer> */}

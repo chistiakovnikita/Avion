@@ -8,20 +8,11 @@ export class Component extends HTMLElement {
   setState(callback) {
     this.state = callback(this.state);
     this.innerHTML = this.render()
-      .toString()
-      .replaceAll(",", "")
-      .trim()
-      .replaceAll(/true|false/gi, "");
   }
 
   connectedCallback() {
     this.innerHTML = this.render()
-      .toString()
-      .replaceAll(",", "")
-      .trim()
-      .replaceAll(/true|false/gi, "");
     this.componentDidMount();
-    this.registerEvents();
   }
 
   disconnectedCallback() {
@@ -39,7 +30,6 @@ export class Component extends HTMLElement {
     this.dispatchEvent(new CustomEvent(type, { bubbles: true, detail: props }));
   }
 
-  registerEvents() {}
   componentDidMount() {}
   componentWillUnmount() {}
   componentWillUpdate() {}

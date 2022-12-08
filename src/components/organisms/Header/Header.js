@@ -1,6 +1,8 @@
 import { Component } from "../../../core";
 import './header.scss'
-import '../../atoms'
+
+
+
 
 export class Header extends Component {
 
@@ -43,24 +45,12 @@ export class Header extends Component {
                             </a>
                         </li>
                     </ul>
-
-                    <div class="header__hamburger">
-                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon">
-                                <use xlink:href="../../assets/images/sprite.svg#Menu"></use>
-                            </svg>
-                        </button>
-                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <p>Try scrolling the rest of the page to see this option in action.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="header__hamburger" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon">
+                        <use xlink:href="../../assets/images/sprite.svg#Menu"></use>
+                    </svg>
+                </button>
+                    <avion-sidebar></avion-sidebar>
                 </nav>
             </div>
         </div>

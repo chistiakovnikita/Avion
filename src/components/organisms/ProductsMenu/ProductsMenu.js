@@ -11,50 +11,10 @@ export class ProductsMenu extends Component {
         </div>
         <div class="products-menu">
             <div class="products-menu__wrapper">
-                <div class="dropdown">
-                    <button class="btn  dropdown-toggle body-medium" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Category
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle body-medium" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Product type
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown">
-                    <button class="btn  dropdown-toggle body-medium" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Price
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown">
-                    <button class="btn  dropdown-toggle body-medium" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Brand
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
+                <avion-dropdown name="Category"></avion-dropdown>
+                <avion-dropdown name="Product type"></avion-dropdown>
+                <avion-dropdown name="Price"></avion-dropdown>
+                <avion-dropdown name="Brand"></avion-dropdown>
             </div>
         </div>
         `
