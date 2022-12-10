@@ -6,26 +6,19 @@ export class App extends Component {
 
       render() {
             return `
-                <header class="header">
-                   <avion-header></avion-header>
-                </header
-                <main>
-                  <section>
-                    <products-tabs></products-tabs>
-                  </section>
-                  <section>
-                     <div class="products">
-                         <products-menu></products-menu>
-                         <products-gallery></products-gallery>
-                         <div class="products__link container center">
-                            <link-collection></link-collection>
-                         </div>
-                      </div>
-                  </section>
-                </main>
-                <footer>
-                   <avion-footer></avion-footer>
-                </footer>
+               <avion-router>
+                  
+                  <avion-link to="/">Home<avion-link>
+                  <avion-link to="/">About<avion-link>
+
+                  <avion-route path="/" component="home-page" title="Home"></avion-route>
+                  <avion-route path="/about" component="about-page" title="About"></avion-route>
+                  <avion-route path="/products/:id" component="product-page" title="Product"></avion-route>
+                  <avion-route path="*" component="error-page" title="Not Found"></avion-route>
+
+                  <avion-outlet></avion-outlet>
+
+               </avion-router>
     
             `
       }
@@ -175,7 +168,7 @@ customElements.define('avion-app', App);
 
 
 // ABOUT
-{/* <header class="header">
+/* <header class="header">
 <avion-header></avion-header>
 </header
 <main>
@@ -196,4 +189,4 @@ customElements.define('avion-app', App);
 <main>
 <footer>
 <avion-footer></avion-footer>
-</footer> */}
+</footer> */
