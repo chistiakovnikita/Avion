@@ -18,7 +18,7 @@
 }
 
 .logo-wrapper {
-    flex: 0.42 0 auto;
+    flex: 0.25 0 auto;
     text-align: end;
 
 }
@@ -27,9 +27,6 @@
     color: var(--dark-blue);
     font-size: 24px;
     transition: color 0.3s linear;
-}
-.logo:hover {
-    color: rgb(216, 204, 242);
 }
 
 .header-navigation__menu {
@@ -60,6 +57,7 @@
 .header-navigation__link {
     font-family: "Satoshi";
     color: var(--light-blue);
+    
 }
 
 .header-navigation__link:hover {

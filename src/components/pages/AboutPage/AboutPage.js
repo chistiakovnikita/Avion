@@ -4,7 +4,17 @@ export class AboutPage extends Component {
 
     render() {
         return `
-            <h1>About Page</h1>
+        <section>
+           <avion-about></avion-about>
+        </section>
+        <section>
+        <div class="our-brand__description-wrapper">
+           <our-brand-description></our-brand-description>
+        </div>
+        </section>
+        <section>
+           <avion-distribution></avion-distribution>
+        </section>
         `
     }
 }

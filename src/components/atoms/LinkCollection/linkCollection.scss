@@ -9,9 +9,11 @@
     font-family: "Satoshi";
     font-size: 16px;
     line-height: 24px;
+    
 }
 
 .link-collection:hover {
+    color: var(--dark-primary);
     background-color: rgb(216, 204, 242);
 }
 

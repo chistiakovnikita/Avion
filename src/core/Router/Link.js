@@ -1,4 +1,5 @@
 import { Component } from "../Component";
+import './link.scss'
 
 export class Link extends Component {
     constructor() {
@@ -26,6 +27,18 @@ export class Link extends Component {
     render() {
         return `
             <a href="${this.props.to}">
+            <style>
+                a{
+                    text-decoration: none;
+                    font-family: "Satoshi";
+                    color: var(--light-blue);
+                    transition: color 0.3s linear;
+                }
+                a:hover {
+                    color: var(--dark-primary);
+                    border-bottom: 2px solid;
+                }
+            </style>
                 <slot></slot>
             </a>
         `;

@@ -1,10 +1,11 @@
-import { Component } from "../../../core";
+import { appRoutes } from '../../../constants/appRoutes'
+import * as core from '../../../core'
 import './header.scss'
 
 
 
 
-export class Header extends Component {
+export class Header extends core.Component {
 
     render() {
         return `
@@ -12,44 +13,42 @@ export class Header extends Component {
             <div class="header__inner">
                 <search-form></search-form>
                 <div class="logo-wrapper">
-                    <a class="logo" href="#"> Avion</a>
+                    <span class="logo"> Avion</span>
                 </div>
                 <nav class="header-navigation">
                     <ul class="header-navigation__menu">
                         <li class="header-navigation__item">
-                            <a class="header-navigation__link" href="#">Home</a>
+                            <avion-link to="${appRoutes.home}">Home</avion-link>
                         </li>
                         <li class="header-navigation__item">
-                            <a class="header-navigation__link" href="#">About us</a>
+                            <avion-link to="${appRoutes.about}">About</avion-link>
                         </li>
                         <li class="header-navigation__item">
-                            <a class="header-navigation__link" href="#">Contact</a>
+                            <avion-link to="${appRoutes.shop}">Shop</avion-link>
                         </li>
-                        <li class="header-navigation__item">
-                            <a class="header-navigation__link" href="#">Blog</a>
-                        </li>
+                        
                     </ul>
                     <ul class="header-navigation__menu-user">
                         <li class="header-navigation__item-user">
-                            <a href="#">
+                            <avion-link to="${appRoutes.cart}">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon">
                                     <use xlink:href="../../assets/images/sprite.svg#Shopping--cart"></use>
                                 </svg>
-                            </a>
+                            </avion-link>
                         </li>
                         <li class="header-navigation__item-user">
-                            <a href="#">
+                            <avion-link to="${appRoutes.signUp}">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon">
                                     <use xlink:href="../../assets/images/sprite.svg#User--avatar"></use>
                                 </svg>
-                            </a>
+                            </avion-link>
                         </li>
                     </ul>
                     <button class="header__hamburger" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon">
                         <use xlink:href="../../assets/images/sprite.svg#Menu"></use>
                     </svg>
-                </button>
+                    </button>
                     <avion-sidebar></avion-sidebar>
                 </nav>
             </div>

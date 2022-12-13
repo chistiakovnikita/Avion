@@ -1,23 +1,38 @@
-import { Component } from "./core";
+import * as core from './core'
 import './components'
+import { appRoutes } from "./constants/appRoutes";
 
 
-export class App extends Component {
+
+
+export class App extends core.Component {
 
       render() {
             return `
                <avion-router>
-                  
-                  <avion-link to="/">Home<avion-link>
-                  <avion-link to="/">About<avion-link>
+                  <header class="header">
+                     <avion-header></avion-header>
+                  </header
+                  <main>
+                     <section>
+                        <products-tabs></products-tabs>
+                     </section>
 
-                  <avion-route path="/" component="home-page" title="Home"></avion-route>
-                  <avion-route path="/about" component="about-page" title="About"></avion-route>
-                  <avion-route path="/products/:id" component="product-page" title="Product"></avion-route>
-                  <avion-route path="*" component="error-page" title="Not Found"></avion-route>
+                     <avion-route path="${appRoutes.home}" component="home-page" title="Home"></avion-route>
+                     <avion-route path="${appRoutes.about}" component="about-page" title="About"></avion-route>
+                     <avion-route path="${appRoutes.shop}" component="shop-page" title="Shop"></avion-route>
+                     <avion-route path="${appRoutes.productDetails}/:id" component="product-page" title="Product"></avion-route>
+                     <avion-route path="${appRoutes.cart}" component="cart-page" title="Cart"></avion-route>
+                     <avion-route path="${appRoutes.admin}" component="admin-page" title="Admin"></avion-route>
+                     <avion-route path="${appRoutes.signIn}" component="sign-in-page" title="Sign In"></avion-route>
+                     <avion-route path="${appRoutes.signUp}" component="sign-up-page" title="Sign Up"></avion-route>
+                     <avion-route path="${appRoutes.errorPage}" component="error-page" title="Not Found"></avion-route>
 
-                  <avion-outlet></avion-outlet>
-
+                     <avion-outlet></avion-outlet>
+                  </main>
+                  <footer>
+                     <avion-footer></avion-footer>
+                  </footer>
                </avion-router>
     
             `
@@ -28,6 +43,21 @@ export class App extends Component {
 }
 
 customElements.define('avion-app', App);
+
+
+{/* <nav>
+                     <ul>
+                        <li>
+                           <avion-link to="/">Home<avion-link>
+                        </li>
+                        <li>
+                           <avion-link to="/about">About<avion-link>
+                        </li>
+                     </ul>
+                  </nav> */}
+
+
+
 
 //  HOME
 // render() {

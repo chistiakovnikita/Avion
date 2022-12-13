@@ -14,12 +14,10 @@
     color: var(--light-blue);
     padding: 5px;
     border-radius: 10px;
-    transition:background-color 0.3s linear;
+    transition: background-color 0.3s linear;
 }
-
 
 .products-tabs__link:hover {
-   background-color: rgb(216, 204, 242);
+    color: var(--dark-primary);
+    background-color: rgb(216, 204, 242);
 }
-
-
