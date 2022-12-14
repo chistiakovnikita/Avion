@@ -1,11 +1,20 @@
 import { appRoutes } from '../../../constants/appRoutes'
 import * as core from '../../../core'
 import './header.scss'
+import { authService } from '../../../services'
 
 
 
 
 export class Header extends core.Component {
+
+
+    componentDidMount() {
+        if (authService.user) {
+            this.querySelector('.avatar').style.fill = 'green'
+            
+        }
+    }
 
     render() {
         return `
@@ -26,6 +35,9 @@ export class Header extends core.Component {
                         <li class="header-navigation__item">
                             <avion-link to="${appRoutes.shop}">Shop</avion-link>
                         </li>
+                        <li class="header-navigation__item">
+                            <avion-link to="${appRoutes.admin}">Admin</avion-link>
+                        </li>
                         
                     </ul>
                     <ul class="header-navigation__menu-user">
@@ -38,7 +50,7 @@ export class Header extends core.Component {
                         </li>
                         <li class="header-navigation__item-user">
                             <avion-link to="${appRoutes.signUp}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon avatar">
                                     <use xlink:href="../../assets/images/sprite.svg#User--avatar"></use>
                                 </svg>
                             </avion-link>

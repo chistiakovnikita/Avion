@@ -1,40 +1,81 @@
 import * as core from './core'
 import './components'
 import { appRoutes } from "./constants/appRoutes";
+import { authService } from './services';
+
 
 
 
 
 export class App extends core.Component {
 
+   constructor() {
+      super()
+      this.state = {
+         isLoading: false,
+         erro: '',
+      }
+   }
+
+   toggleIsLoading() {
+      this.setState((state) => {
+        return {
+          ...state,
+          isLoading: !state.isLoading,
+        };
+      })
+    }
+
+   componentDidMount() {
+      this.toggleIsLoading()
+      authService
+         .init()
+         .then((user) => {
+            authService.user = user
+         })
+         .catch((error) => {
+            this.setState((state) => {
+               return {
+                  ...this.state,
+                  error: error.message
+               }
+            })
+         })
+         .finally(() => {
+            this.toggleIsLoading()
+         })
+   }
+
       render() {
             return `
                <avion-router>
-                  <header class="header">
-                     <avion-header></avion-header>
-                  </header
-                  <main>
-                     <section>
-                        <products-tabs></products-tabs>
-                     </section>
+                  <avion-preloader is-loading="${this.state.isLoading}">
+                     <header class="header">
+                        <avion-header></avion-header>
+                     </header
+                     <main>
+                        <section>
+                           <products-tabs></products-tabs>
+                        </section>
 
-                     <avion-route path="${appRoutes.home}" component="home-page" title="Home"></avion-route>
-                     <avion-route path="${appRoutes.about}" component="about-page" title="About"></avion-route>
-                     <avion-route path="${appRoutes.shop}" component="shop-page" title="Shop"></avion-route>
-                     <avion-route path="${appRoutes.productDetails}/:id" component="product-page" title="Product"></avion-route>
-                     <avion-route path="${appRoutes.cart}" component="cart-page" title="Cart"></avion-route>
-                     <avion-route path="${appRoutes.admin}" component="admin-page" title="Admin"></avion-route>
-                     <avion-route path="${appRoutes.signIn}" component="sign-in-page" title="Sign In"></avion-route>
-                     <avion-route path="${appRoutes.signUp}" component="sign-up-page" title="Sign Up"></avion-route>
-                     <avion-route path="${appRoutes.errorPage}" component="error-page" title="Not Found"></avion-route>
+                        <avion-route path="${appRoutes.home}" component="home-page" title="Home"></avion-route>
+                        <avion-route path="${appRoutes.about}" component="about-page" title="About"></avion-route>
+                        <avion-route path="${appRoutes.shop}" component="shop-page" title="Shop"></avion-route>
+                        <avion-route path="${appRoutes.productDetails}/:id" component="product-page" title="Product"></avion-route>
+                        <avion-route path="${appRoutes.cart}" component="cart-page" title="Cart"></avion-route>
+                        <avion-route path="${appRoutes.admin}" component="admin-page" title="Admin"></avion-route>
+                        <avion-route path="${appRoutes.signIn}" component="sign-in-page" title="Sign In"></avion-route>
+                        <avion-route path="${appRoutes.signUp}" component="sign-up-page" title="Sign Up"></avion-route>
+                        <avion-route path="${appRoutes.errorPage}" component="error-page" title="Not Found"></avion-route>
 
-                     <avion-outlet></avion-outlet>
-                  </main>
-                  <footer>
-                     <avion-footer></avion-footer>
-                  </footer>
+                        <avion-outlet></avion-outlet>
+                     </main>
+                     <footer>
+                        <avion-footer></avion-footer>
+                     </footer>
+                  </avion-preloader
                </avion-router>
-    
+                              
             `
       }
 

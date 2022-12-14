@@ -1,5 +1,5 @@
 import { Component } from "../Component";
-import './link.scss'
+
 
 export class Link extends Component {
     constructor() {
