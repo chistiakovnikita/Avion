@@ -8,12 +8,29 @@ import { authService } from '../../../services'
 
 export class Header extends core.Component {
 
+    static get observedAttributes() {
+        return ['is-logged']
+    }
+
+    onSignOut = (evt) => {
+        evt.preventDefault()
+        if(evt.target.closest('.sign-out-link')) {
+            this.dispatch('sign-out')
+        }
+        
+    }
+
 
     componentDidMount() {
         if (authService.user) {
             this.querySelector('.avatar').style.fill = 'green'
-            
         }
+
+        this.addEventListener('click', this.onSignOut);
+    }
+
+    componentWillUnmount() {
+        this.removeEventListener('click', this.onSignOut);
     }
 
     render() {
@@ -38,7 +55,20 @@ export class Header extends core.Component {
                         <li class="header-navigation__item">
                             <avion-link to="${appRoutes.admin}">Admin</avion-link>
                         </li>
-                        
+                       
+                        ${JSON.parse(this.props['is-logged'])
+                        ? `<li class="header-navigation__item">
+                                <a class="sign-out-link" href="#">Sign Out</a>
+                            </li>`
+                        : `
+                        <li class="header-navigation__item">
+                            <avion-link to="${appRoutes.signIn}">Sign In</avion-link>
+                        </li>
+                        <li class="header-navigation__item">
+                            <avion-link to="${appRoutes.signUp}">Sign Up</avion-link>
+                        </li>
+                        `
+                        }
                     </ul>
                     <ul class="header-navigation__menu-user">
                         <li class="header-navigation__item-user">
@@ -49,11 +79,11 @@ export class Header extends core.Component {
                             </avion-link>
                         </li>
                         <li class="header-navigation__item-user">
-                            <avion-link to="${appRoutes.signUp}">
+                           
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon avatar">
                                     <use xlink:href="../../assets/images/sprite.svg#User--avatar"></use>
                                 </svg>
-                            </avion-link>
+                           
                         </li>
                     </ul>
                     <button class="header__hamburger" type="button">

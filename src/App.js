@@ -13,30 +13,37 @@ export class App extends core.Component {
       super()
       this.state = {
          isLoading: false,
-         erro: '',
+         error: '',
+         isLogged: false,
       }
    }
 
    toggleIsLoading() {
       this.setState((state) => {
-        return {
-          ...state,
-          isLoading: !state.isLoading,
-        };
+         return {
+            ...state,
+            isLoading: !state.isLoading,
+         };
       })
-    }
+   }
 
-   componentDidMount() {
+   getUser() {
       this.toggleIsLoading()
       authService
          .init()
          .then((user) => {
             authService.user = user
+            this.setState((state) => {
+               return {
+                  ...state,
+                  isLogged: Boolean(user)
+               }
+            })
          })
          .catch((error) => {
             this.setState((state) => {
                return {
-                  ...this.state,
+                  ...state,
                   error: error.message
                }
             })
@@ -46,38 +53,79 @@ export class App extends core.Component {
          })
    }
 
-      render() {
-            return `
-               <avion-router>
-                  <avion-preloader is-loading="${this.state.isLoading}">
-                     <header class="header">
-                        <avion-header></avion-header>
-                     </header
-                     <main>
-                        <section>
-                           <products-tabs></products-tabs>
-                        </section>
+   onSignOut = () => {
+      this.toggleIsLoading()
+      authService.signOut()
+         .then(() => {
+            this.setState((state) => {
+               return {
+                  ...state,
+                  isLogged: false,
+               }
+            })
+         })
+         .catch((error) => {
+            this.setState((state) => {
+               return {
+                  ...state,
+                  error: error.message
+               }
+            })
+         })
+         .finally(() => {
+            this.toggleIsLoading()
+         })
+   }
 
-                        <avion-route path="${appRoutes.home}" component="home-page" title="Home"></avion-route>
-                        <avion-route path="${appRoutes.about}" component="about-page" title="About"></avion-route>
-                        <avion-route path="${appRoutes.shop}" component="shop-page" title="Shop"></avion-route>
-                        <avion-route path="${appRoutes.productDetails}/:id" component="product-page" title="Product"></avion-route>
-                        <avion-route path="${appRoutes.cart}" component="cart-page" title="Cart"></avion-route>
-                        <avion-route path="${appRoutes.admin}" component="admin-page" title="Admin"></avion-route>
-                        <avion-route path="${appRoutes.signIn}" component="sign-in-page" title="Sign In"></avion-route>
-                        <avion-route path="${appRoutes.signUp}" component="sign-up-page" title="Sign Up"></avion-route>
-                        <avion-route path="${appRoutes.errorPage}" component="error-page" title="Not Found"></avion-route>
+   setIsLogged = () => {
+      this.setState((state) => {
+         return {
+            ...state,
+            isLogged: true,
+         }
+      })
+   }
 
-                        <avion-outlet></avion-outlet>
-                     </main>
-                     <footer>
-                        <avion-footer></avion-footer>
-                     </footer>
-                  </avion-preloader
-               </avion-router>
-                              
-            `
-      }
+   componentDidMount() {
+      this.getUser()
+      this.addEventListener('sign-out', this.onSignOut);
+      this.addEventListener('user-is-logged', this.setIsLogged)
+   }
+
+   componentWillUnmount() {
+      this.removeEventListener('sign-out', this.onSignOut);
+      this.removeEventListener('user-is-logged', this.setIsLogged)
+   }
+
+   render() {
+      return `
+            ${this.state.isLoading
+            ? `<avion-preloader is-loading="${this.state.isLoading}"></avion-preloader>`
+            : `<avion-router>
+               <header class="header">
+                  <avion-header is-logged="${this.state.isLogged}"></avion-header>
+               </header
+               <main>
+                  <section>
+                     <products-tabs></products-tabs>
+                  </section>
+                  <avion-route path="${appRoutes.home}" component="home-page" title="Home"></avion-route>
+                  <avion-route path="${appRoutes.about}" component="about-page" title="About"></avion-route>
+                  <avion-route path="${appRoutes.shop}" component="shop-page" title="Shop"></avion-route>
+                  <avion-route path="${appRoutes.productDetails}/:id" component="product-page" title="Product"></avion-route>
+                  <avion-route path="${appRoutes.cart}" component="cart-page" title="Cart"></avion-route>
+                  <avion-route path="${appRoutes.admin}" component="admin-page" title="Admin"></avion-route>
+                  <avion-route path="${appRoutes.signIn}" component="sign-in-page" title="Sign In"></avion-route>
+                  <avion-route path="${appRoutes.signUp}" component="sign-up-page" title="Sign Up"></avion-route>
+                  <avion-route path="${appRoutes.errorPage}" component="error-page" title="Not Found"></avion-route>
+                  <avion-outlet></avion-outlet>
+               </main>
+               <footer>
+                  <avion-footer></avion-footer>
+               </footer>
+            </avion-router>`
+         }`
+   }
 
 
 

@@ -1,23 +1,26 @@
-import { Component } from "../../../core";
+import { appRoutes } from "../../../constants/appRoutes";
+import * as core from "../../../core"
 import './productCard.scss'
 
-export class ProductCard extends Component {
+export class ProductCard extends core.Component {
 
 
 
     static get observedAttributes() {
-        return ['content']
+        return ['title', 'poster', 'id', 'price']
     }
 
     render() {
         return `
             <div class="product-card">
-                <img class="product-card__image" src="../../assets/images/ProductCard/Rustic_Vase_Set.jpg" alt="picture">
+                <avion-link to="${appRoutes.productDetails}/${this.props.id}">
+                    <img class="product-card__image" src="${this.props.poster}" alt="picture">
+                </avion-link>
                 <h4 class="product-card__title">
-                    Rustic Vase Set
+                    ${this.props.title}
                 </h4>
                 <span class="product-card__price">
-                    £155
+                £ ${this.props.price}
                 </span>
             </div>
         `

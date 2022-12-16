@@ -1,6 +1,46 @@
 import { Component } from "../../../core";
+import { databaseService } from "../../../services/Database";
+import '../../../components'
 
 export class HomePage extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            isLoading: false,
+            products: [],
+        }
+    }
+
+    toggleisLoading = () => {
+        this.setState((state) => {
+            return {
+                ...state,
+                isLoading: !state.isLoading
+            }
+        })
+    }
+
+
+    getProducts() {
+        this.toggleisLoading()
+        databaseService.read('products')
+        .then((data) => {
+            this.setState((state) => {
+                return {
+                    ...state,
+                    products: data,
+                }
+            })
+        })
+        .finally(() => {
+            this.toggleisLoading()
+        })
+    }
+
+    componentDidMount() {
+        this.getProducts()
+    }
 
     render() {
         return `
@@ -9,15 +49,29 @@ export class HomePage extends Component {
             </section>
             <section>
                 <our-brand-description></our-brand-description>
-                <div class="our-brand__products container">
-                    <product-card></product-card>
-                    <product-card></product-card>
-                    <product-card></product-card>
-                    <product-card></product-card>
-                    <div class="our-brand__link">
+                <avion-preloader is-loading="${this.state.isLoading}">
+                    <div class="our-brand__products container">
+                        
+                        
+                            ${this.state.products.map(({ title, poster, price, id }) => {
+                                return `
+                                    <product-card
+                                        title="${title}"
+                                        poster="${poster}"
+                                        price="${price}"
+                                        id="${id}"
+
+                                    ></product-card>`
+                            }).join(' ')
+                        }
+
+                        <div class="our-brand__link">
                         <link-collection></link-collection>
+                        </div>
+                        
                     </div>
-                </div>
+                    
+                </avion-preloader>
             </section>
             <section>
                 <avion-story></avion-story>
