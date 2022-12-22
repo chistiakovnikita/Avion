@@ -3,6 +3,9 @@ import './cart.scss'
 
 export class Cart extends Component {
 
+  
+
+
     render() {
         return `
         <div class="cart">

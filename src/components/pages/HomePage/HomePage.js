@@ -51,20 +51,17 @@ export class HomePage extends Component {
                 <our-brand-description></our-brand-description>
                 <avion-preloader is-loading="${this.state.isLoading}">
                     <div class="our-brand__products container">
-                        
-                        
-                            ${this.state.products.map(({ title, poster, price, id }) => {
-                                return `
-                                    <product-card
-                                        title="${title}"
-                                        poster="${poster}"
-                                        price="${price}"
-                                        id="${id}"
+                        ${this.state.products.map(({ title, poster, price, id }) => {
+                            return `
+                                <product-card
+                                    title="${title}"
+                                    poster="${poster}"
+                                    price="${price}"
+                                    id="${id}"
 
-                                    ></product-card>`
+                                ></product-card>`
                             }).join(' ')
                         }
-
                         <div class="our-brand__link">
                         <link-collection></link-collection>
                         </div>

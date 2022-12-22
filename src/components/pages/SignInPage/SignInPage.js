@@ -3,6 +3,7 @@ import { FormManager } from "../../../core";
 import { initialFieldsState } from "./initialState";
 import { authService } from '../../../services'
 import { appRoutes } from "../../../constants/appRoutes";
+import { eventBus } from "../../../core";
 
 export class SignInPage extends Component {
 
@@ -33,7 +34,7 @@ export class SignInPage extends Component {
             .then((user) => {
                 authService.user = user
                 this.dispatch('change-route', {target: appRoutes.home})
-                this.dispatch('user-is-logged')
+                eventBus.emit('user-is-logged')
             })
             .catch((error) => {
                 this.setState((state) => {
@@ -79,7 +80,7 @@ export class SignInPage extends Component {
     componentDidMount() {
         this.addEventListener('submit', this.form.handleSubmit(this.signIn));
         this.addEventListener('click', this.validateForm);
-        this.addEventListener('validate-controls', this.validate);
+        this.addEventListener('validate-controls', this.validate)
     }
 
 

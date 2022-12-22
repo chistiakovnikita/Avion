@@ -7,7 +7,7 @@ export class ProductCard extends core.Component {
 
 
     static get observedAttributes() {
-        return ['title', 'poster', 'id', 'price']
+        return ['title', 'poster', 'id', 'price', 'category']
     }
 
     render() {

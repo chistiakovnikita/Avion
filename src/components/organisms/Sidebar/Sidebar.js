@@ -9,8 +9,6 @@ export class Sidebar extends Component {
         }
     }
 
-    toggleMenu
-
     onClick= (evt) => {
         const target = evt.target
         if(target.closest('.header__hamburger')) {

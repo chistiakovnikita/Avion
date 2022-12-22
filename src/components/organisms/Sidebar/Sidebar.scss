@@ -4,9 +4,16 @@
     bottom: 0;
     left: 0;
     background: var(--light-gray);
+    transform: translateX(-300px);
     width: 300px;
     z-index: 101;
+    transition: transform 0.5s linear;
 }
+.header__mobile-menu--active {
+    transform: translateX(0);
+}
+
+
 
 .header__mobile-navigation {
     text-align: center;

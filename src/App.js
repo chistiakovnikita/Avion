@@ -2,6 +2,7 @@ import * as core from './core'
 import './components'
 import { appRoutes } from "./constants/appRoutes";
 import { authService } from './services';
+import { eventBus } from './core';
 
 
 
@@ -13,8 +14,8 @@ export class App extends core.Component {
       super()
       this.state = {
          isLoading: false,
-         error: '',
          isLogged: false,
+         error: '',
       }
    }
 
@@ -88,13 +89,15 @@ export class App extends core.Component {
 
    componentDidMount() {
       this.getUser()
+     
       this.addEventListener('sign-out', this.onSignOut);
-      this.addEventListener('user-is-logged', this.setIsLogged)
+      eventBus.on('user-is-logged', this.setIsLogged)
    }
 
    componentWillUnmount() {
       this.removeEventListener('sign-out', this.onSignOut);
-      this.removeEventListener('user-is-logged', this.setIsLogged)
+      eventBus.off('user-is-logged', this.setIsLogged)
+
    }
 
    render() {

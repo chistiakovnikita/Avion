@@ -20,7 +20,6 @@
 .logo-wrapper {
     flex: 0.25 0 auto;
     text-align: end;
-
 }
 
 .logo {
@@ -57,7 +56,6 @@
 .header-navigation__link {
     font-family: "Satoshi";
     color: var(--light-blue);
-    
 }
 
 .header-navigation__link:hover {
@@ -79,21 +77,31 @@
     fill: rgb(216, 204, 242);
 }
 
+.sign-out-link {
+    text-decoration: none;
+    font-family: "Satoshi";
+    color: var(--light-blue);
+    transition: color 0.3s linear;
+}
 
+.sign-out-link:hover {
+    color: var(--dark-primary);
+    border-bottom: 2px solid;
+}
 
-
+.active-link {
+    color: var(--dark-primary);
+    border-bottom: 1px solid var(--dark-primary);
+}
 
 
 @media screen and (max-width: 1440px) {
     header {
         padding: 0 5px;
     }
-
 }
 
 @media screen and (max-width: 768px) {
-   
-
     .header-navigation__menu {
         display: none;
     }
@@ -104,5 +112,4 @@
     .header-navigation__item-user:last-child {
         margin-right: 16px;
     }
-
 }

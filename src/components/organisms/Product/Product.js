@@ -3,29 +3,32 @@ import './product.scss'
 
 export class Product extends Component {
 
+
+    static get observedAttributes() {
+        return ['id', 'poster', 'title', 'price', 'description']
+    }
+
+    
+
     render() {
         return `
             <div class="product">
                 <div class="product__item">
-                    <img class="product__image" src="../../assets/images/Product/The_Dandy_Chair.jpg" alt="picture">
+                    <img class="product__image" src="${this.props.poster}" alt="picture">
                 </div>
                 <div class="product__item">
                     <div class=" product__description">
                         <h1 class="product__title headline-one">
-                            The Dandy Chair
+                        ${this.props.title}
                         </h1>
                         <span class="product__price">
-                            £250
+                            £${this.props.price}
                         </span>
                         <h5 class="product__subtitle headline-five">
                             Product description
                         </h5>
                         <p class="product__text body-medium">
-                            A timeless design, with premium materials features as one of our most popular and iconic
-                            pieces.
-                            The
-                            dandy chair is perfect for any stylish living space with beech legs and lambskin leather
-                            upholstery.
+                            ${this.props.description}
                         </p>
 
                         <div class="product-dimensions">
