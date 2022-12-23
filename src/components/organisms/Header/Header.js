@@ -44,6 +44,9 @@ export class Header extends core.Component {
     componentDidMount() {
         this.addEventListener('click', this.onSignOut);
         this.addEventListener('change-route', this.onChangeRoute);
+        if(authService.user) {
+            this.querySelector('.avatar').style.fill = "green"
+        }
     }
 
     componentWillUnmount() {
@@ -57,8 +60,12 @@ export class Header extends core.Component {
             <div class="header__inner">
                 <search-form></search-form>
                 <div class="logo-wrapper">
-                    <span class="logo"> Avion</span>
-                </div>
+                    <avion-link to="${appRoutes.home}">
+                        <div>
+                            <span class="logo"> Avion</span>
+                        </div>
+                    </div>
+                </avion-link>
                 <nav class="header-navigation">
                     <ul class="header-navigation__menu">
                         <li class="header-navigation__item">

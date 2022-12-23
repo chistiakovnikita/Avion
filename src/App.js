@@ -109,9 +109,7 @@ export class App extends core.Component {
                   <avion-header is-logged="${this.state.isLogged}"></avion-header>
                </header
                <main>
-                  <section>
-                     <products-tabs></products-tabs>
-                  </section>
+                  
                   <avion-route path="${appRoutes.home}" component="home-page" title="Home"></avion-route>
                   <avion-route path="${appRoutes.about}" component="about-page" title="About"></avion-route>
                   <avion-route path="${appRoutes.shop}" component="shop-page" title="Shop"></avion-route>

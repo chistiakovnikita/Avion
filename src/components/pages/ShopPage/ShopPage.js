@@ -34,7 +34,7 @@ export class ShopPage extends Component {
                 this.setState((state) => {
                     return {
                         ...state,
-                        products: data,
+                        products: data.sort(() => Math.random() - 0.5)
 
                     }
                 })
@@ -61,7 +61,6 @@ export class ShopPage extends Component {
     }
 
     componentWillUnmount() {
-
         eventBus.off('change-tab', this.onChangeFilter)
     }
 
@@ -69,8 +68,11 @@ export class ShopPage extends Component {
         console.log(this.state.activeFilter)
         return `
             <section>
+                <products-tabs></products-tabs>
+            </section>
+            <section>
                  <div class="products">
-                    <products-menu></products-menu>
+                    
                     <avion-preloader is-loading="${this.state.isLoading}">
                   
                         <div class="products-gallery">

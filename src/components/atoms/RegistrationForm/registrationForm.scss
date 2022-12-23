@@ -1,8 +1,10 @@
 .registration-form {
     width: 100%;
     max-width: 1000px;
-    margin: 100px auto;
+    margin: 50px auto;
     padding: 40px;
     border-top: 1px solid var(--dark-grey);
     border-bottom: 1px solid var(--dark-grey);
+    background: var(--light-gray);
+    font-family: "Clash Display";
 }

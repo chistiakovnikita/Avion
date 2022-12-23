@@ -10,17 +10,17 @@ export class CartProduct extends Component {
     render() {
         return `
             <div class="cart__product flex-container">
-                <img class="cart__product-image" src="${this.props.poster}"
+                <img class="cart__product-image" src="../../../assets/images/CartProduct/Product_Image.jpg"
                     alt="picture">
                 <div class="cart__product-description">
                     <h4 class="headline-four">
-                        ${this.props.poster}
+                        Sono Vase
                     </h4>
                     <p class="body-small--blue">
-                        ${this.props.description}
+                        A timeless ceramic vase with a tri color grey glaze.
                     </p>
                     <span class="body-medium">
-                        £${this.props.price}
+                        £270
                     </span>
                 </div>
             </div>

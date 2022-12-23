@@ -6,8 +6,10 @@
 }
 
 .products-tabs-wrapper {
-    margin: 20px auto;
-    max-width: 676px;
+    margin: 50px auto;
+    padding: 10px;
+    max-width: 675px;
+    background: var(--light-gray);
 }
 
 .products-tabs__link {

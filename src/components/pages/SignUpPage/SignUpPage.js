@@ -87,6 +87,7 @@ export class SignUpPage extends Component {
         const { fields: { email, password } } = this.state;
         return `
             <section>
+                <h2 class="headline-two registration-page-title">Sign Up</h2>
                 <div class="registration-form">
                     <avion-preloader is-loading="${this.state.isLoading}">
                         <form class="registration">

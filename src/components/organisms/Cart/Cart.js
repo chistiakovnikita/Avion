@@ -43,7 +43,7 @@ export class Cart extends Component {
                         </div>
                         <div class="cart__product-price-wrapper">
                             <span class="cart__product-price">
-                                £85
+                                £270
                             </span>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ export class Cart extends Component {
                                 Subtotal
                             </h4>
                             <span class="headline-three">
-                                £85
+                                £270
                             </span>
                         </div>
                         <p class="headline-six--blue">

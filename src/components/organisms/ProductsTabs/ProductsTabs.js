@@ -31,12 +31,12 @@ export class ProductsTabs extends Component {
             <div class="products-tabs-wrapper">
                 <div class="products-tabs">
                 ${appCategories.map((item) => {
-            return `
-                    <a class="products-tabs__link categories" href="#" data-categories="${item.value}">${item.label}</a>
-                    `
-        })
-                .join(' ')
-            }
+                    return `
+                        <a class="products-tabs__link categories" href="#" data-categories="${item.value}">${item.label}</a>
+                        `
+                    })
+                    .join(' ')
+                }
                     
                 </div>
             </div>

@@ -5,6 +5,7 @@ import './adminForm.scss'
 export class AdminForm extends Component {
     render() {
         return`
+            <h2 class="admin-page-title headline-two">Admin panel</h2>
             <div class="container mt-5 mb-5">
                 <div class="row">
                     <div class="col-12">

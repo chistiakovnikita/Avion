@@ -1,4 +1,20 @@
 .admin-form {
     max-width: 700px;
     margin: 0 auto;
+    background: var(--light-gray);
+    font-family: inherit;
+}
+
+.admin-page-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn {
+    background: var(--primary);
+    border-radius: 0;
+}
+
+.btn:hover {
+    background: var(--dark-primary);
 }

@@ -10,24 +10,24 @@ export class Sidebar extends core.Component {
         }
     }
 
+    toggleMenu = () => {
+        this.setState((state) => {
+            return {
+                ...state,
+                isVisible: !state.isVisible,
+            }
+        })
+    }
+
+
 
     onClick= (evt) => {
         const target = evt.target
         if(target.closest('.header__hamburger')) {
-            this.setState((state) =>{
-                return {
-                    ...state,
-                    isVisible:true,
-                }
-            })
+            this.toggleMenu()
         }
         if(target.closest('.header__mobile-button')) {
-            this.setState((state) =>{
-                return {
-                    ...state,
-                    isVisible:false,
-                }
-            })
+            this.toggleMenu()
         }
     }
 

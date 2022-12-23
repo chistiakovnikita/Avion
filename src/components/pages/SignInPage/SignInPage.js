@@ -4,6 +4,7 @@ import { initialFieldsState } from "./initialState";
 import { authService } from '../../../services'
 import { appRoutes } from "../../../constants/appRoutes";
 import { eventBus } from "../../../core";
+import './signInPage.scss'
 
 export class SignInPage extends Component {
 
@@ -89,6 +90,7 @@ export class SignInPage extends Component {
         const { fields: { email, password } } = this.state;
         return `
             <section>
+                <h2 class="headline-two registration-page-title">Sign In</h2>
                 <div class="registration-form">
                     <avion-preloader is-loading="${this.state.isLoading}">
                         <form class="registration">

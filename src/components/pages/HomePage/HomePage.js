@@ -29,7 +29,7 @@ export class HomePage extends Component {
             this.setState((state) => {
                 return {
                     ...state,
-                    products: data,
+                    products: data.slice(8, 12)
                 }
             })
         })
@@ -47,10 +47,10 @@ export class HomePage extends Component {
             <section>
                 <new-collection></new-collection>
             </section>
-            <section>
+            <section class="container">
                 <our-brand-description></our-brand-description>
                 <avion-preloader is-loading="${this.state.isLoading}">
-                    <div class="our-brand__products container">
+                    <div class="our-brand__products">
                         ${this.state.products.map(({ title, poster, price, id }) => {
                             return `
                                 <product-card
@@ -62,10 +62,11 @@ export class HomePage extends Component {
                                 ></product-card>`
                             }).join(' ')
                         }
-                        <div class="our-brand__link">
-                        <link-collection></link-collection>
-                        </div>
                         
+                        
+                    </div>
+                    <div class="our-brand__link center">
+                        <link-collection></link-collection>
                     </div>
                     
                 </avion-preloader>
