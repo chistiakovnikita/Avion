@@ -94,6 +94,28 @@
     border-bottom: 1px solid var(--dark-primary);
 }
 
+.registration-dropdown {
+    cursor: pointer;
+}
+.registration-dropdown__menu {
+    padding: 0 40px;
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    background-color: var(--light-gray);
+    text-align: center;
+    
+
+}
+
+.registration-dropdown:hover .registration-dropdown__menu {
+    display: block;
+}
+.registration-dropdown__menu .header-navigation__item:not(:last-child) {
+    margin: 0 0 10px 0;
+    
+}
 
 @media screen and (max-width: 1440px) {
     header {

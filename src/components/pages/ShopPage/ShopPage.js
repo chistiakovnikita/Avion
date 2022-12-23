@@ -9,16 +9,26 @@ export class ShopPage extends Component {
     constructor() {
         super()
         this.state = {
-
+            isLoading: false,
             products: [],
             activeFilter: '',
 
         }
     }
 
+    toggleisLoading = () => {
+        this.setState((state) => {
+            return {
+                ...state,
+                isLoading: !state.isLoading
+            }
+        })
+    }
+
 
 
     getProducts = () => {
+        this.toggleisLoading()
         databaseService.read('products')
             .then((data) => {
                 this.setState((state) => {
@@ -28,6 +38,9 @@ export class ShopPage extends Component {
 
                     }
                 })
+            })
+            .finally(() => {
+                this.toggleisLoading()
             })
     }
 
@@ -58,17 +71,18 @@ export class ShopPage extends Component {
             <section>
                  <div class="products">
                     <products-menu></products-menu>
+                    <avion-preloader is-loading="${this.state.isLoading}">
                   
                         <div class="products-gallery">
 
                             ${this.state.products.filter((item) => {
-            if (this.state.activeFilter) {
-                return item.category === this.state.activeFilter
-            }
-            return true
+                                if (this.state.activeFilter) {
+                                    return item.category === this.state.activeFilter
+                                }
+                                return true
 
-        }).map(({ title, poster, price, id }) => {
-            return `
+                                }).map(({ title, poster, price, id }) => {
+                                    return `
                                     <product-card
                                         title="${title}"
                                         poster="${poster}"
@@ -77,10 +91,10 @@ export class ShopPage extends Component {
 
                                     ></product-card>`
 
-        }).join(' ')
-            }
+                                }).join(' ')
+                            }
                         </div>
-                   
+                    </avion-preloader>
                     <div class="products__link container center">
                         <link-collection></link-collection>
                     </div>

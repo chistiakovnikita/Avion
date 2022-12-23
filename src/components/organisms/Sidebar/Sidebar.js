@@ -1,13 +1,15 @@
-import { Component } from "../../../core";
+import * as core from '../../../core'
 import './sidebar.scss'
+import { appRoutes } from "../../../constants/appRoutes";
 
-export class Sidebar extends Component {
+export class Sidebar extends core.Component {
     constructor() {
         super()
         this.state = {
             isVisible: false,
         }
     }
+
 
     onClick= (evt) => {
         const target = evt.target
@@ -41,13 +43,19 @@ export class Sidebar extends Component {
                        <nav class="header__mobile-navigation">
                            <ul>
                                <li class="header__mobile-navigation-item">
-                                   <a class="header__mobile-navigation-link" href="./index.html">Home</a>
+                               <avion-link to="${appRoutes.home}">
+                                   <span class="header__mobile-navigation-link">Home</span>
+                                <avion-link>
                                </li>
                                <li class="header__mobile-navigation-item">
-                                   <a class="header__mobile-navigation-link" href="./about.html">About Us</a>
+                               <avion-link to="${appRoutes.about}">
+                                   <span class="header__mobile-navigation-link">About</span>
+                                <avion-link>
                                </li>
                                <li class="header__mobile-navigation-item">
-                                   <a class="header__mobile-navigation-link" href="./about.html">Products</a>
+                               <avion-link to="${appRoutes.shop}">
+                                   <span class="header__mobile-navigation-link">Shop</span>
+                                <avion-link>
                                </li>
                            </ul>
                            <button class="header__mobile-button">

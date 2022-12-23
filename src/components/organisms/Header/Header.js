@@ -78,44 +78,49 @@ export class Header extends core.Component {
                         </li>
                        
                        
-                        ${JSON.parse(this.props['is-logged'])
-                ? `         
-                            <li class="header-navigation__item">
-                                <avion-link to="${appRoutes.admin}">
-                                    <span class="${this.isActiveLink(appRoutes.admin)}">Admin</span>
-                                </avion-link>
-                            </li>
-                            <li class="header-navigation__item">
-                                <a class="sign-out-link" href="#">Sign Out</a>
-                            </li>`
-                : `
-                        <li class="header-navigation__item">
-                            <avion-link to="${appRoutes.signIn}">
-                                <span class="${this.isActiveLink(appRoutes.signIn)}">Sign In</span>
-                            </avion-link>
-                        </li>
-                        <li class="header-navigation__item">
-                            <avion-link to="${appRoutes.signUp}">
-                                <span class="${this.isActiveLink(appRoutes.signUp)}">Sign Up</span>
-                            </avion-link>
-                        </li>
-                        `
-            }
+                
                     </ul>
                     <ul class="header-navigation__menu-user">
                     
-                        <li class="header-navigation__item-user">
-                            <avion-link to="${appRoutes.cart}">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon">
-                                    <use xlink:href="../../assets/images/sprite.svg#Shopping--cart"></use>
+                            <li class="header-navigation__item-user">
+                                <avion-link to="${appRoutes.cart}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon">
+                                        <use xlink:href="../../assets/images/sprite.svg#Shopping--cart"></use>
+                                    </svg>
+                                </avion-link>
+                            </li>
+
+                            <li class="header-navigation__item-user registration-dropdown">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon avatar">
+                                        <use xlink:href="../../assets/images/sprite.svg#User--avatar"></use>
                                 </svg>
-                            </avion-link>
-                        </li>
-                        <li class="header-navigation__item-user">
-                               <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon avatar">
-                                    <use xlink:href="../../assets/images/sprite.svg#User--avatar"></use>
-                                </svg>
-                        </li>
+                            
+                                <ul class="registration-dropdown__menu">
+                                    ${JSON.parse(this.props['is-logged'])
+                                        ? `         
+                                                <li class="header-navigation__item">
+                                                    <avion-link to="${appRoutes.admin}">
+                                                        <span>Admin</span>
+                                                    </avion-link>
+                                                </li>
+                                                <li class="header-navigation__item">
+                                                    <a class="sign-out-link" href="#">Sign Out</a>
+                                                </li>`
+                                        : `
+                                                <li class="header-navigation__item">
+                                                    <avion-link to="${appRoutes.signIn}">
+                                                        <span>Sign In</span>
+                                                    </avion-link>
+                                                </li>
+                                                <li class="header-navigation__item">
+                                                    <avion-link to="${appRoutes.signUp}">
+                                                        <span>Sign Up</span>
+                                                    </avion-link>
+                                                </li>
+                                                `
+                                    }
+                                </ul>
+                            </li>
                     </ul>
                     <button class="header__hamburger" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon header__icon">
